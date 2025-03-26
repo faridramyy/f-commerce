@@ -1,0 +1,2496 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>e-commerce</title>
+    <!-- bootstrap-icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <!-- Vendor CSS Files -->
+    <link
+      href="https://bootstrapmade.com/content/vendors/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/vendors/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/vendors/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/vendors/aos/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/vendors/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://bootstrapmade.com/content/vendors/drift-zoom/drift-basic.css"
+      rel="stylesheet"
+    />
+    <!-- Main CSS File -->
+    <link
+      href="https://bootstrapmade.com/content/demo/eStore/assets/css/main.css"
+      rel="stylesheet"
+    />
+    <style type="text/css">
+      * {
+        animation-duration: 0.001s !important;
+        transition-duration: 0.001s !important;
+      }
+    </style>
+  </head>
+  <body
+    class="category-page"
+    data-aos-delay="0"
+    data-aos-duration="600"
+    data-aos-easing="ease-in-out"
+  >
+    <header class="header position-relative" id="header">
+      <!-- Top Bar -->
+      <div class="top-bar py-2">
+        <div class="container-fluid container-xl">
+          <div class="row align-items-center">
+            <div class="col-lg-4 d-none d-lg-flex">
+              <div class="top-bar-item">
+                <i class="bi bi-telephone-fill me-2"></i>
+                <span>Need help? Call us: </span>
+                <a href="tel:+1234567890">+1 (234) 567-890</a>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-12 text-center">
+              <div
+                class="announcement-slider swiper init-swiper swiper-initialized swiper-vertical swiper-backface-hidden"
+              >
+                <script class="swiper-config" type="application/json">
+                  {
+                    "loop": true,
+                    "speed": 600,
+                    "autoplay": {
+                      "delay": 5000
+                    },
+                    "slidesPerView": 1,
+                    "direction": "vertical",
+                    "effect": "slide"
+                  }
+                </script>
+                <div
+                  aria-live="off"
+                  class="swiper-wrapper"
+                  id="swiper-wrapper-ed2a97926a2cd105a"
+                  style="
+                    transition-duration: 0ms;
+                    transform: translate3d(0px, -48px, 0px);
+                    transition-delay: 0ms;
+                  "
+                >
+                  <div
+                    aria-label="1 / 3"
+                    class="swiper-slide swiper-slide-next"
+                    data-swiper-slide-index="0"
+                    role="group"
+                    style="height: 24px"
+                  >
+                    🚚 Free shipping on orders over $50
+                  </div>
+                  <div
+                    aria-label="2 / 3"
+                    class="swiper-slide swiper-slide-prev"
+                    data-swiper-slide-index="1"
+                    role="group"
+                    style="height: 24px"
+                  >
+                    💰 30 days money back guarantee.
+                  </div>
+                  <div
+                    aria-label="3 / 3"
+                    class="swiper-slide swiper-slide-active"
+                    data-swiper-slide-index="2"
+                    role="group"
+                    style="height: 24px"
+                  >
+                    🎁 20% off on your first order
+                  </div>
+                </div>
+                <span
+                  aria-atomic="true"
+                  aria-live="assertive"
+                  class="swiper-notification"
+                ></span>
+              </div>
+            </div>
+            <div class="col-lg-4 d-none d-lg-block">
+              <div class="d-flex justify-content-end">
+                <div class="top-bar-item dropdown me-3">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    <i class="bi bi-translate me-2"></i>EN
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-check2 me-2 selected-icon"></i
+                        >English</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">Español</a></li>
+                    <li><a class="dropdown-item" href="#">Français</a></li>
+                    <li><a class="dropdown-item" href="#">Deutsch</a></li>
+                  </ul>
+                </div>
+                <div class="top-bar-item dropdown">
+                  <a class="dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    <i class="bi bi-currency-dollar me-2"></i>USD
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        ><i class="bi bi-check2 me-2 selected-icon"></i>USD</a
+                      >
+                    </li>
+                    <li><a class="dropdown-item" href="#">EUR</a></li>
+                    <li><a class="dropdown-item" href="#">GBP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main Header -->
+      <div class="main-header">
+        <div class="container-fluid container-xl">
+          <div class="d-flex py-3 align-items-center justify-content-between">
+            <!-- Logo -->
+            <a class="logo d-flex align-items-center" href="index.html">
+              <!-- Uncomment the line below if you also wish to use an image logo -->
+              <!-- <img src="assets/img/logo.webp" alt=""> -->
+              <h1 class="sitename">eStore</h1>
+            </a>
+            <!-- Search -->
+            <form class="search-form desktop-search-form">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  placeholder="Search for products"
+                  type="text"
+                />
+                <button class="btn" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+            <!-- Actions -->
+            <div
+              class="header-actions d-flex align-items-center justify-content-end"
+            >
+              <!-- Mobile Search Toggle -->
+              <button
+                aria-controls="mobileSearch"
+                aria-expanded="false"
+                class="header-action-btn mobile-search-toggle d-xl-none"
+                data-bs-target="#mobileSearch"
+                data-bs-toggle="collapse"
+                type="button"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+              <!-- Account -->
+              <div class="dropdown account-dropdown">
+                <button class="header-action-btn" data-bs-toggle="dropdown">
+                  <i class="bi bi-person"></i>
+                </button>
+                <div class="dropdown-menu">
+                  <div class="dropdown-header">
+                    <h6>Welcome to <span class="sitename">eStore</span></h6>
+                    <p class="mb-0">Access account &amp; manage orders</p>
+                  </div>
+                  <div class="dropdown-body">
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="account.html"
+                    >
+                      <i class="bi bi-person-circle me-2"></i>
+                      <span>My Profile</span>
+                    </a>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="account.html"
+                    >
+                      <i class="bi bi-bag-check me-2"></i>
+                      <span>My Orders</span>
+                    </a>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="account.html"
+                    >
+                      <i class="bi bi-heart me-2"></i>
+                      <span>My Wishlist</span>
+                    </a>
+                    <a
+                      class="dropdown-item d-flex align-items-center"
+                      href="account.html"
+                    >
+                      <i class="bi bi-gear me-2"></i>
+                      <span>Settings</span>
+                    </a>
+                  </div>
+                  <div class="dropdown-footer">
+                    <a class="btn btn-primary w-100 mb-2" href="register.html"
+                      >Sign In</a
+                    >
+                    <a class="btn btn-outline-primary w-100" href="login.html"
+                      >Register</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- Wishlist -->
+              <a
+                class="header-action-btn d-none d-md-block"
+                href="account.html"
+              >
+                <i class="bi bi-heart"></i>
+                <span class="badge">0</span>
+              </a>
+              <!-- Cart -->
+              <a class="header-action-btn" href="cart.html">
+                <i class="bi bi-cart3"></i>
+                <span class="badge">3</span>
+              </a>
+              <!-- Mobile Navigation Toggle -->
+              <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navigation -->
+      <div class="header-nav">
+        <div class="container-fluid container-xl">
+          <div class="position-relative">
+            <nav class="navmenu" id="navmenu">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="category.html">Category</a></li>
+                <li><a href="product-details.html">Product Details</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    ><span>Dropdown</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <ul>
+                    <li><a href="#">Dropdown 1</a></li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Deep Dropdown</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Deep Dropdown 1</a></li>
+                        <li><a href="#">Deep Dropdown 2</a></li>
+                        <li><a href="#">Deep Dropdown 3</a></li>
+                        <li><a href="#">Deep Dropdown 4</a></li>
+                        <li><a href="#">Deep Dropdown 5</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Dropdown 2</a></li>
+                    <li><a href="#">Dropdown 3</a></li>
+                    <li><a href="#">Dropdown 4</a></li>
+                  </ul>
+                </li>
+                <!-- Products Mega Menu 1 -->
+                <li class="products-megamenu-1">
+                  <a href="#"
+                    ><span>Megamenu 1</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <!-- Products Mega Menu 1 Mobile View -->
+                  <ul class="mobile-megamenu">
+                    <li><a href="#">Featured Products</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Sale Items</a></li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Clothing</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Men's Wear</a></li>
+                        <li><a href="#">Women's Wear</a></li>
+                        <li><a href="#">Kids Collection</a></li>
+                        <li><a href="#">Sportswear</a></li>
+                        <li><a href="#">Accessories</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Electronics</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Smartphones</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Audio Devices</a></li>
+                        <li><a href="#">Smart Home</a></li>
+                        <li><a href="#">Accessories</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Home &amp; Living</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Furniture</a></li>
+                        <li><a href="#">Decor</a></li>
+                        <li><a href="#">Kitchen</a></li>
+                        <li><a href="#">Bedding</a></li>
+                        <li><a href="#">Lighting</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Beauty</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Haircare</a></li>
+                        <li><a href="#">Fragrances</a></li>
+                        <li><a href="#">Personal Care</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- End Products Mega Menu 1 Mobile View -->
+                  <!-- Products Mega Menu 1 Desktop View -->
+                  <div class="desktop-megamenu">
+                    <div class="megamenu-tabs">
+                      <ul
+                        class="nav nav-tabs"
+                        id="productMegaMenuTabs"
+                        role="tablist"
+                      >
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="true"
+                            class="nav-link active"
+                            data-bs-target="#featured-content-1862"
+                            data-bs-toggle="tab"
+                            id="featured-tab"
+                            role="tab"
+                            type="button"
+                          >
+                            Featured
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="false"
+                            class="nav-link"
+                            data-bs-target="#new-content-1862"
+                            data-bs-toggle="tab"
+                            id="new-tab"
+                            role="tab"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            New Arrivals
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="false"
+                            class="nav-link"
+                            data-bs-target="#sale-content-1862"
+                            data-bs-toggle="tab"
+                            id="sale-tab"
+                            role="tab"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            Sale
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="false"
+                            class="nav-link"
+                            data-bs-target="#category-content-1862"
+                            data-bs-toggle="tab"
+                            id="category-tab"
+                            role="tab"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            Categories
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Tabs Content -->
+                    <div class="megamenu-content tab-content">
+                      <!-- Featured Tab -->
+                      <div
+                        aria-labelledby="featured-tab"
+                        class="tab-pane fade show active"
+                        id="featured-content-1862"
+                        role="tabpanel"
+                      >
+                        <div class="product-grid">
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Featured Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-1.webp"
+                              />
+                            </div>
+                            <div class="product-info">
+                              <h5>Premium Headphones</h5>
+                              <p class="price">$129.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Featured Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-2.webp"
+                              />
+                            </div>
+                            <div class="product-info">
+                              <h5>Smart Watch</h5>
+                              <p class="price">$199.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Featured Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-3.webp"
+                              />
+                            </div>
+                            <div class="product-info">
+                              <h5>Wireless Earbuds</h5>
+                              <p class="price">$89.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Featured Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-4.webp"
+                              />
+                            </div>
+                            <div class="product-info">
+                              <h5>Bluetooth Speaker</h5>
+                              <p class="price">$79.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- New Arrivals Tab -->
+                      <div
+                        aria-labelledby="new-tab"
+                        class="tab-pane fade"
+                        id="new-content-1862"
+                        role="tabpanel"
+                      >
+                        <div class="product-grid">
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="New Arrival"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-5.webp"
+                              />
+                              <span class="badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Fitness Tracker</h5>
+                              <p class="price">$69.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="New Arrival"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-6.webp"
+                              />
+                              <span class="badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Wireless Charger</h5>
+                              <p class="price">$39.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="New Arrival"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-7.webp"
+                              />
+                              <span class="badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Smart Bulb Set</h5>
+                              <p class="price">$49.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="New Arrival"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-8.webp"
+                              />
+                              <span class="badge-new">New</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Portable Power Bank</h5>
+                              <p class="price">$59.99</p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Sale Tab -->
+                      <div
+                        aria-labelledby="sale-tab"
+                        class="tab-pane fade"
+                        id="sale-content-1862"
+                        role="tabpanel"
+                      >
+                        <div class="product-grid">
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Sale Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-9.webp"
+                              />
+                              <span class="badge-sale">-30%</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Wireless Keyboard</h5>
+                              <p class="price">
+                                <span class="original-price">$89.99</span>
+                                $62.99
+                              </p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Sale Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-10.webp"
+                              />
+                              <span class="badge-sale">-25%</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Gaming Mouse</h5>
+                              <p class="price">
+                                <span class="original-price">$59.99</span>
+                                $44.99
+                              </p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Sale Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-11.webp"
+                              />
+                              <span class="badge-sale">-40%</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>Desk Lamp</h5>
+                              <p class="price">
+                                <span class="original-price">$49.99</span>
+                                $29.99
+                              </p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                          <div class="product-card">
+                            <div class="product-image">
+                              <img
+                                alt="Sale Product"
+                                loading="lazy"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-12.webp"
+                              />
+                              <span class="badge-sale">-20%</span>
+                            </div>
+                            <div class="product-info">
+                              <h5>USB-C Hub</h5>
+                              <p class="price">
+                                <span class="original-price">$39.99</span>
+                                $31.99
+                              </p>
+                              <a class="btn-view" href="#">View Product</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Categories Tab -->
+                      <div
+                        aria-labelledby="category-tab"
+                        class="tab-pane fade"
+                        id="category-content-1862"
+                        role="tabpanel"
+                      >
+                        <div class="category-grid">
+                          <div class="category-column">
+                            <h4>Clothing</h4>
+                            <ul>
+                              <li><a href="#">Men's Wear</a></li>
+                              <li><a href="#">Women's Wear</a></li>
+                              <li><a href="#">Kids Collection</a></li>
+                              <li><a href="#">Sportswear</a></li>
+                              <li><a href="#">Accessories</a></li>
+                            </ul>
+                          </div>
+                          <div class="category-column">
+                            <h4>Electronics</h4>
+                            <ul>
+                              <li><a href="#">Smartphones</a></li>
+                              <li><a href="#">Laptops</a></li>
+                              <li><a href="#">Audio Devices</a></li>
+                              <li><a href="#">Smart Home</a></li>
+                              <li><a href="#">Accessories</a></li>
+                            </ul>
+                          </div>
+                          <div class="category-column">
+                            <h4>Home &amp; Living</h4>
+                            <ul>
+                              <li><a href="#">Furniture</a></li>
+                              <li><a href="#">Decor</a></li>
+                              <li><a href="#">Kitchen</a></li>
+                              <li><a href="#">Bedding</a></li>
+                              <li><a href="#">Lighting</a></li>
+                            </ul>
+                          </div>
+                          <div class="category-column">
+                            <h4>Beauty</h4>
+                            <ul>
+                              <li><a href="#">Skincare</a></li>
+                              <li><a href="#">Makeup</a></li>
+                              <li><a href="#">Haircare</a></li>
+                              <li><a href="#">Fragrances</a></li>
+                              <li><a href="#">Personal Care</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Products Mega Menu 1 Desktop View -->
+                </li>
+                <!-- End Products Mega Menu 1 -->
+                <!-- Products Mega Menu 2 -->
+                <li class="products-megamenu-2">
+                  <a href="#"
+                    ><span>Megamenu 2</span>
+                    <i class="bi bi-chevron-down toggle-dropdown"></i
+                  ></a>
+                  <!-- Products Mega Menu 2 Mobile View -->
+                  <ul class="mobile-megamenu">
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">Kids'</a></li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Clothing</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Shirts &amp; Tops</a></li>
+                        <li><a href="#">Coats &amp; Outerwear</a></li>
+                        <li><a href="#">Underwear</a></li>
+                        <li><a href="#">Sweatshirts</a></li>
+                        <li><a href="#">Dresses</a></li>
+                        <li><a href="#">Swimwear</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Shoes</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Boots</a></li>
+                        <li><a href="#">Sandals</a></li>
+                        <li><a href="#">Heels</a></li>
+                        <li><a href="#">Loafers</a></li>
+                        <li><a href="#">Slippers</a></li>
+                        <li><a href="#">Oxfords</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Accessories</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Handbags</a></li>
+                        <li><a href="#">Eyewear</a></li>
+                        <li><a href="#">Hats</a></li>
+                        <li><a href="#">Watches</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Belts</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#"
+                        ><span>Specialty Sizes</span>
+                        <i class="bi bi-chevron-down toggle-dropdown"></i
+                      ></a>
+                      <ul>
+                        <li><a href="#">Plus Size</a></li>
+                        <li><a href="#">Petite</a></li>
+                        <li><a href="#">Wide Shoes</a></li>
+                        <li><a href="#">Narrow Shoes</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <!-- End Products Mega Menu 2 Mobile View -->
+                  <!-- Products Mega Menu 2 Desktop View -->
+                  <div class="desktop-megamenu">
+                    <div class="megamenu-tabs">
+                      <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="true"
+                            class="nav-link active"
+                            data-bs-target="#womens-content-1883"
+                            data-bs-toggle="tab"
+                            id="womens-tab"
+                            role="tab"
+                            type="button"
+                          >
+                            WOMEN
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="false"
+                            class="nav-link"
+                            data-bs-target="#mens-content-1883"
+                            data-bs-toggle="tab"
+                            id="mens-tab"
+                            role="tab"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            MEN
+                          </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button
+                            aria-selected="false"
+                            class="nav-link"
+                            data-bs-target="#kids-content-1883"
+                            data-bs-toggle="tab"
+                            id="kids-tab"
+                            role="tab"
+                            tabindex="-1"
+                            type="button"
+                          >
+                            KIDS
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- Tabs Content -->
+                    <div class="megamenu-content tab-content">
+                      <!-- Women Tab -->
+                      <div
+                        aria-labelledby="womens-tab"
+                        class="tab-pane fade show active"
+                        id="womens-content-1883"
+                        role="tabpanel"
+                      >
+                        <div class="category-layout">
+                          <div class="categories-section">
+                            <div class="category-headers">
+                              <h4>Clothing</h4>
+                              <h4>Shoes</h4>
+                              <h4>Accessories</h4>
+                              <h4>Specialty Sizes</h4>
+                            </div>
+                            <div class="category-links">
+                              <div class="link-row">
+                                <a href="#">Shirts &amp; Tops</a>
+                                <a href="#">Boots</a>
+                                <a href="#">Handbags</a>
+                                <a href="#">Plus Size</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Coats &amp; Outerwear</a>
+                                <a href="#">Sandals</a>
+                                <a href="#">Eyewear</a>
+                                <a href="#">Petite</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Underwear</a>
+                                <a href="#">Heels</a>
+                                <a href="#">Hats</a>
+                                <a href="#">Wide Shoes</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Sweatshirts</a>
+                                <a href="#">Loafers</a>
+                                <a href="#">Watches</a>
+                                <a href="#">Narrow Shoes</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Dresses</a>
+                                <a href="#">Slippers</a>
+                                <a href="#">Jewelry</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Swimwear</a>
+                                <a href="#">Oxfords</a>
+                                <a href="#">Belts</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-section">
+                            <div class="featured-image">
+                              <img
+                                alt="Women's Heels Collection"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-f-1.webp"
+                              />
+                              <div class="featured-content">
+                                <h3>Women's<br />Bags<br />Collection</h3>
+                                <a class="btn-shop" href="#">Shop now</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Men Tab -->
+                      <div
+                        aria-labelledby="mens-tab"
+                        class="tab-pane fade"
+                        id="mens-content-1883"
+                        role="tabpanel"
+                      >
+                        <div class="category-layout">
+                          <div class="categories-section">
+                            <div class="category-headers">
+                              <h4>Clothing</h4>
+                              <h4>Shoes</h4>
+                              <h4>Accessories</h4>
+                              <h4>Specialty Sizes</h4>
+                            </div>
+                            <div class="category-links">
+                              <div class="link-row">
+                                <a href="#">Shirts &amp; Polos</a>
+                                <a href="#">Sneakers</a>
+                                <a href="#">Watches</a>
+                                <a href="#">Big &amp; Tall</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Jackets &amp; Coats</a>
+                                <a href="#">Boots</a>
+                                <a href="#">Belts</a>
+                                <a href="#">Slim Fit</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Underwear</a>
+                                <a href="#">Loafers</a>
+                                <a href="#">Ties</a>
+                                <a href="#">Wide Shoes</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Hoodies</a>
+                                <a href="#">Dress Shoes</a>
+                                <a href="#">Wallets</a>
+                                <a href="#">Extended Sizes</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Suits</a>
+                                <a href="#">Sandals</a>
+                                <a href="#">Sunglasses</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Activewear</a>
+                                <a href="#">Slippers</a>
+                                <a href="#">Hats</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-section">
+                            <div class="featured-image">
+                              <img
+                                alt="Men's Footwear Collection"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-m-4.webp"
+                              />
+                              <div class="featured-content">
+                                <h3>Men's<br />Footwear<br />Collection</h3>
+                                <a class="btn-shop" href="#">Shop now</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Kids Tab -->
+                      <div
+                        aria-labelledby="kids-tab"
+                        class="tab-pane fade"
+                        id="kids-content-1883"
+                        role="tabpanel"
+                      >
+                        <div class="category-layout">
+                          <div class="categories-section">
+                            <div class="category-headers">
+                              <h4>Clothing</h4>
+                              <h4>Shoes</h4>
+                              <h4>Accessories</h4>
+                              <h4>By Age</h4>
+                            </div>
+                            <div class="category-links">
+                              <div class="link-row">
+                                <a href="#">T-shirts &amp; Tops</a>
+                                <a href="#">Sneakers</a>
+                                <a href="#">Backpacks</a>
+                                <a href="#">Babies (0-24 months)</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Outerwear</a>
+                                <a href="#">Boots</a>
+                                <a href="#">Hats &amp; Caps</a>
+                                <a href="#">Toddlers (2-4 years)</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Pajamas</a>
+                                <a href="#">Sandals</a>
+                                <a href="#">Socks</a>
+                                <a href="#">Kids (4-7 years)</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Sweatshirts</a>
+                                <a href="#">Slippers</a>
+                                <a href="#">Gloves</a>
+                                <a href="#">Older Kids (8-14 years)</a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Dresses</a>
+                                <a href="#">School Shoes</a>
+                                <a href="#">Scarves</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">Swimwear</a>
+                                <a href="#">Sports Shoes</a>
+                                <a href="#">Hair Accessories</a>
+                                <a href="#"></a>
+                              </div>
+                              <div class="link-row">
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#">View all</a>
+                                <a href="#"></a>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="featured-section">
+                            <div class="featured-image">
+                              <img
+                                alt="Kids' New Arrivals"
+                                src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-9.webp"
+                              />
+                              <div class="featured-content">
+                                <h3>Kids<br />New<br />Arrivals</h3>
+                                <a class="btn-shop" href="#">Shop now</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Products Mega Menu 2 Desktop View -->
+                </li>
+                <!-- End Products Mega Menu 2 -->
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Search Form -->
+      <div class="collapse" id="mobileSearch">
+        <div class="container">
+          <form class="search-form">
+            <div class="input-group">
+              <input
+                class="form-control"
+                placeholder="Search for products"
+                type="text"
+              />
+              <button class="btn" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Category</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Category</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 sidebar">
+            <div class="widgets-container">
+              <!-- Product Categories Widget -->
+              <div class="product-categories-widget widget-item">
+                <h3 class="widget-title">Categories</h3>
+                <ul class="category-tree list-unstyled mb-0">
+                  <!-- Clothing Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-clothing-subcategories"
+                      aria-expanded="true"
+                      class="d-flex justify-content-between align-items-center category-header"
+                      data-bs-target="#categories-1-clothing-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Clothing</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled ps-3 mt-2 collapse show"
+                      id="categories-1-clothing-subcategories"
+                      style=""
+                    >
+                      <li>
+                        <a class="subcategory-link" href="#">Men's Wear</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Women's Wear</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Kids' Clothing</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Accessories</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Electronics Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-electronics-subcategories"
+                      aria-expanded="true"
+                      class="d-flex justify-content-between align-items-center category-header"
+                      data-bs-target="#categories-1-electronics-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Electronics</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled ps-3 mt-2 collapse show"
+                      id="categories-1-electronics-subcategories"
+                      style=""
+                    >
+                      <li>
+                        <a class="subcategory-link" href="#">Smartphones</a>
+                      </li>
+                      <li><a class="subcategory-link" href="#">Laptops</a></li>
+                      <li><a class="subcategory-link" href="#">Tablets</a></li>
+                      <li>
+                        <a class="subcategory-link" href="#">Accessories</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Home & Kitchen Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-home-subcategories"
+                      aria-expanded="false"
+                      class="d-flex justify-content-between align-items-center category-header collapsed"
+                      data-bs-target="#categories-1-home-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Home &amp; Kitchen</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled collapse ps-3 mt-2"
+                      id="categories-1-home-subcategories"
+                    >
+                      <li>
+                        <a class="subcategory-link" href="#">Furniture</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#"
+                          >Kitchen Appliances</a
+                        >
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Home Decor</a>
+                      </li>
+                      <li><a class="subcategory-link" href="#">Bedding</a></li>
+                    </ul>
+                  </li>
+                  <!-- Beauty & Personal Care Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-beauty-subcategories"
+                      aria-expanded="false"
+                      class="d-flex justify-content-between align-items-center category-header collapsed"
+                      data-bs-target="#categories-1-beauty-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Beauty &amp; Personal Care</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled collapse ps-3 mt-2"
+                      id="categories-1-beauty-subcategories"
+                    >
+                      <li><a class="subcategory-link" href="#">Skincare</a></li>
+                      <li><a class="subcategory-link" href="#">Makeup</a></li>
+                      <li>
+                        <a class="subcategory-link" href="#">Hair Care</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Fragrances</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Sports & Outdoors Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-sports-subcategories"
+                      aria-expanded="false"
+                      class="d-flex justify-content-between align-items-center category-header collapsed"
+                      data-bs-target="#categories-1-sports-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Sports &amp; Outdoors</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled collapse ps-3 mt-2"
+                      id="categories-1-sports-subcategories"
+                    >
+                      <li>
+                        <a class="subcategory-link" href="#"
+                          >Fitness Equipment</a
+                        >
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Outdoor Gear</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Sports Apparel</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#">Team Sports</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- Books Category (no subcategories) -->
+                  <li class="category-item">
+                    <div
+                      class="d-flex justify-content-between align-items-center category-header"
+                    >
+                      <a class="category-link" href="#">Books</a>
+                    </div>
+                  </li>
+                  <!-- Toys & Games Category -->
+                  <li class="category-item">
+                    <div
+                      aria-controls="categories-1-toys-subcategories"
+                      aria-expanded="false"
+                      class="d-flex justify-content-between align-items-center category-header collapsed"
+                      data-bs-target="#categories-1-toys-subcategories"
+                      data-bs-toggle="collapse"
+                    >
+                      <a class="category-link" href="javascript:void(0)"
+                        >Toys &amp; Games</a
+                      >
+                      <span class="category-toggle">
+                        <i class="bi bi-chevron-down"></i>
+                        <i class="bi bi-chevron-up"></i>
+                      </span>
+                    </div>
+                    <ul
+                      class="subcategory-list list-unstyled collapse ps-3 mt-2"
+                      id="categories-1-toys-subcategories"
+                    >
+                      <li>
+                        <a class="subcategory-link" href="#">Board Games</a>
+                      </li>
+                      <li><a class="subcategory-link" href="#">Puzzles</a></li>
+                      <li>
+                        <a class="subcategory-link" href="#">Action Figures</a>
+                      </li>
+                      <li>
+                        <a class="subcategory-link" href="#"
+                          >Educational Toys</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <!--/Product Categories Widget -->
+              <!-- Pricing Range Widget -->
+              <div class="pricing-range-widget widget-item">
+                <h3 class="widget-title">Price Range</h3>
+                <div class="price-range-container">
+                  <div class="current-range mb-3">
+                    <span class="min-price">$0</span>
+                    <span class="max-price float-end">$500</span>
+                  </div>
+                  <div class="range-slider">
+                    <div class="slider-track"></div>
+                    <div
+                      class="slider-progress"
+                      style="left: 0%; width: 50%"
+                    ></div>
+                    <input
+                      class="min-range"
+                      max="1000"
+                      min="0"
+                      step="10"
+                      type="range"
+                      value="0"
+                    />
+                    <input
+                      class="max-range"
+                      max="1000"
+                      min="0"
+                      step="10"
+                      type="range"
+                      value="500"
+                    />
+                  </div>
+                  <div class="price-inputs mt-3">
+                    <div class="row g-2">
+                      <div class="col-6">
+                        <div class="input-group input-group-sm">
+                          <span class="input-group-text">$</span>
+                          <input
+                            class="form-control min-price-input"
+                            max="1000"
+                            min="0"
+                            placeholder="Min"
+                            step="10"
+                            type="number"
+                            value="0"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="input-group input-group-sm">
+                          <span class="input-group-text">$</span>
+                          <input
+                            class="form-control max-price-input"
+                            max="1000"
+                            min="0"
+                            placeholder="Max"
+                            step="10"
+                            type="number"
+                            value="500"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-actions mt-3">
+                    <button class="btn btn-sm btn-primary w-100" type="button">
+                      Apply Filter
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--/Pricing Range Widget -->
+              <!-- Brand Filter Widget -->
+              <h3 class="brand-filter-widget widget-item">Filter by Brand</h3>
+              <!--/Brand Filter Widget -->
+              <!-- Color Filter Widget -->
+              <div class="color-filter-widget widget-item">
+                <h3 class="widget-title">Filter by Color</h3>
+                <div class="color-filter-content">
+                  <div class="color-options">
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-black"
+                        type="checkbox"
+                        value="black"
+                      />
+                      <label class="form-check-label" for="color-black">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #000000"
+                          title="Black"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-white"
+                        type="checkbox"
+                        value="white"
+                      />
+                      <label class="form-check-label" for="color-white">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #ffffff"
+                          title="White"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-red"
+                        type="checkbox"
+                        value="red"
+                      />
+                      <label class="form-check-label" for="color-red">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #e74c3c"
+                          title="Red"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-blue"
+                        type="checkbox"
+                        value="blue"
+                      />
+                      <label class="form-check-label" for="color-blue">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #3498db"
+                          title="Blue"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-green"
+                        type="checkbox"
+                        value="green"
+                      />
+                      <label class="form-check-label" for="color-green">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #2ecc71"
+                          title="Green"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-yellow"
+                        type="checkbox"
+                        value="yellow"
+                      />
+                      <label class="form-check-label" for="color-yellow">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #f1c40f"
+                          title="Yellow"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-purple"
+                        type="checkbox"
+                        value="purple"
+                      />
+                      <label class="form-check-label" for="color-purple">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #9b59b6"
+                          title="Purple"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-orange"
+                        type="checkbox"
+                        value="orange"
+                      />
+                      <label class="form-check-label" for="color-orange">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #e67e22"
+                          title="Orange"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-pink"
+                        type="checkbox"
+                        value="pink"
+                      />
+                      <label class="form-check-label" for="color-pink">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #fd79a8"
+                          title="Pink"
+                        ></span>
+                      </label>
+                    </div>
+                    <div class="form-check color-option">
+                      <input
+                        class="form-check-input"
+                        id="color-brown"
+                        type="checkbox"
+                        value="brown"
+                      />
+                      <label class="form-check-label" for="color-brown">
+                        <span
+                          class="color-swatch"
+                          style="background-color: #795548"
+                          title="Brown"
+                        ></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter-actions mt-3">
+                    <button
+                      class="btn btn-sm btn-outline-secondary"
+                      type="button"
+                    >
+                      Clear All
+                    </button>
+                    <button class="btn btn-sm btn-primary" type="button">
+                      Apply Filter
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!--/Color Filter Widget -->
+              <!-- Brand Filter Widget -->
+              <div class="brand-filter-widget widget-item">
+                <h3 class="widget-title">Filter by Brand</h3>
+                <div class="brand-filter-content">
+                  <div class="brand-search">
+                    <input
+                      class="form-control"
+                      placeholder="Search brands..."
+                      type="text"
+                    />
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <div class="brand-list">
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand1"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand1">
+                          Nike
+                          <span class="brand-count">(24)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand2"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand2">
+                          Adidas
+                          <span class="brand-count">(18)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand3"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand3">
+                          Puma
+                          <span class="brand-count">(12)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand4"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand4">
+                          Reebok
+                          <span class="brand-count">(9)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand5"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand5">
+                          Under Armour
+                          <span class="brand-count">(7)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand6"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand6">
+                          New Balance
+                          <span class="brand-count">(6)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand7"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand7">
+                          Converse
+                          <span class="brand-count">(5)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="brand-item">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          id="brand8"
+                          type="checkbox"
+                        />
+                        <label class="form-check-label" for="brand8">
+                          Vans
+                          <span class="brand-count">(4)</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="brand-actions">
+                    <button class="btn btn-sm btn-outline-primary">
+                      Apply Filter
+                    </button>
+                    <button class="btn btn-sm btn-link">Clear All</button>
+                  </div>
+                </div>
+              </div>
+              <!--/Brand Filter Widget -->
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <!-- Category Header Section -->
+            <section class="category-header section" id="category-header">
+              <div class="container aos-init aos-animate" data-aos="fade-up">
+                <!-- Filter and Sort Options -->
+                <div
+                  class="filter-container mb-4 aos-init aos-animate"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                >
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="filter-item search-form">
+                        <label class="form-label" for="productSearch"
+                          >Search Products</label
+                        >
+                        <div class="input-group">
+                          <input
+                            aria-label="Search for products"
+                            class="form-control"
+                            id="productSearch"
+                            placeholder="Search for products..."
+                            type="text"
+                          />
+                          <button class="btn search-btn" type="button">
+                            <i class="bi bi-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                      <div class="filter-item">
+                        <label class="form-label" for="priceRange"
+                          >Price Range</label
+                        >
+                        <select class="form-select" id="priceRange">
+                          <option selected="">All Prices</option>
+                          <option>Under $25</option>
+                          <option>$25 to $50</option>
+                          <option>$50 to $100</option>
+                          <option>$100 to $200</option>
+                          <option>$200 &amp; Above</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                      <div class="filter-item">
+                        <label class="form-label" for="sortBy">Sort By</label>
+                        <select class="form-select" id="sortBy">
+                          <option selected="">Featured</option>
+                          <option>Price: Low to High</option>
+                          <option>Price: High to Low</option>
+                          <option>Customer Rating</option>
+                          <option>Newest Arrivals</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                      <div class="filter-item">
+                        <label class="form-label">View</label>
+                        <div class="d-flex align-items-center">
+                          <div class="view-options me-3">
+                            <button
+                              aria-label="Grid view"
+                              class="btn view-btn active"
+                              data-view="grid"
+                              type="button"
+                            >
+                              <i class="bi bi-grid-3x3-gap-fill"></i>
+                            </button>
+                            <button
+                              aria-label="List view"
+                              class="btn view-btn"
+                              data-view="list"
+                              type="button"
+                            >
+                              <i class="bi bi-list-ul"></i>
+                            </button>
+                          </div>
+                          <div class="items-per-page">
+                            <select
+                              aria-label="Items per page"
+                              class="form-select"
+                              id="itemsPerPage"
+                            >
+                              <option value="12">12 per page</option>
+                              <option value="24">24 per page</option>
+                              <option value="48">48 per page</option>
+                              <option value="96">96 per page</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div
+                      class="col-12 aos-init aos-animate"
+                      data-aos="fade-up"
+                      data-aos-delay="200"
+                    >
+                      <div class="active-filters">
+                        <span class="active-filter-label">Active Filters:</span>
+                        <div class="filter-tags">
+                          <span class="filter-tag">
+                            Electronics
+                            <button class="filter-remove">
+                              <i class="bi bi-x"></i>
+                            </button>
+                          </span>
+                          <span class="filter-tag">
+                            $50 to $100
+                            <button class="filter-remove">
+                              <i class="bi bi-x"></i>
+                            </button>
+                          </span>
+                          <button class="clear-all-btn">Clear All</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- /Category Header Section -->
+            <!-- Category Product List Section -->
+            <section
+              class="category-product-list section"
+              id="category-product-list"
+            >
+              <div
+                class="container aos-init aos-animate"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="row gy-4">
+                  <!-- Product 1 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <span class="product-label">New Season</span>
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-3.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button class="add-to-cart-btn" type="button">
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Vestibulum ante ipsum primis</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span>$149.99</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                          </div>
+                          <span class="rating-number">4.0</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option"
+                            style="background-color: #3b82f6"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #22c55e"
+                          ></span>
+                          <span
+                            class="color-option active"
+                            style="background-color: #f97316"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 1 -->
+                  <!-- Product 2 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <span class="product-label product-label-sale"
+                          >-30%</span
+                        >
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-6.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button class="add-to-cart-btn" type="button">
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Aliquam tincidunt mauris eu risus</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span class="original">$199.99</span>
+                            <span class="sale">$139.99</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <span class="rating-number">4.5</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option"
+                            style="background-color: #0ea5e9"
+                          ></span>
+                          <span
+                            class="color-option active"
+                            style="background-color: #111827"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #a855f7"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 2 -->
+                  <!-- Product 3 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-9.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button class="add-to-cart-btn" type="button">
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Cras ornare tristique elit</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span>$89.50</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star"></i>
+                            <i class="bi bi-star"></i>
+                          </div>
+                          <span class="rating-number">3.0</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option active"
+                            style="background-color: #ef4444"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #64748b"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #eab308"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 3 -->
+                  <!-- Product 4 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-11.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button class="add-to-cart-btn" type="button">
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Integer vitae libero ac risus</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span>$119.00</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                          </div>
+                          <span class="rating-number">5.0</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option"
+                            style="background-color: #10b981"
+                          ></span>
+                          <span
+                            class="color-option active"
+                            style="background-color: #8b5cf6"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #ec4899"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 4 -->
+                  <!-- Product 5 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <span class="product-label product-label-sold"
+                          >Sold Out</span
+                        >
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-2.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button
+                              class="add-to-cart-btn disabled"
+                              type="button"
+                            >
+                              Sold Out
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Donec eu libero sit amet quam</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span>$75.00</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                          </div>
+                          <span class="rating-number">4.7</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option active"
+                            style="background-color: #4b5563"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #e11d48"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #4f46e5"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 5 -->
+                  <!-- Product 6 -->
+                  <div class="col-lg-6">
+                    <div class="product-box">
+                      <div class="product-thumb">
+                        <span class="product-label product-label-hot">Hot</span>
+                        <img
+                          alt="Product Image"
+                          class="main-img"
+                          loading="lazy"
+                          src="https://bootstrapmade.com/content/demo/eStore/assets/img/product/product-12.webp"
+                        />
+                        <div class="product-overlay">
+                          <div class="product-quick-actions">
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-arrow-repeat"></i>
+                            </button>
+                            <button class="quick-action-btn" type="button">
+                              <i class="bi bi-eye"></i>
+                            </button>
+                          </div>
+                          <div class="add-to-cart-container">
+                            <button class="add-to-cart-btn" type="button">
+                              Add to Cart
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="product-content">
+                        <div class="product-details">
+                          <h3 class="product-title">
+                            <a href="product-details.html"
+                              >Pellentesque habitant morbi tristique</a
+                            >
+                          </h3>
+                          <div class="product-price">
+                            <span>$64.95</span>
+                          </div>
+                        </div>
+                        <div class="product-rating-container">
+                          <div class="rating-stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i>
+                            <i class="bi bi-star"></i>
+                          </div>
+                          <span class="rating-number">3.6</span>
+                        </div>
+                        <div class="product-color-options">
+                          <span
+                            class="color-option"
+                            style="background-color: #eab308"
+                          ></span>
+                          <span
+                            class="color-option"
+                            style="background-color: #14b8a6"
+                          ></span>
+                          <span
+                            class="color-option active"
+                            style="background-color: #facc15"
+                          ></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Product 6 -->
+                </div>
+              </div>
+            </section>
+            <!-- /Category Product List Section -->
+            <!-- Category Pagination Section -->
+            <section
+              class="category-pagination section"
+              id="category-pagination"
+            >
+              <div class="container">
+                <nav
+                  aria-label="Page navigation"
+                  class="d-flex justify-content-center"
+                >
+                  <ul>
+                    <li>
+                      <a aria-label="Previous page" href="#">
+                        <i class="bi bi-arrow-left"></i>
+                        <span class="d-none d-sm-inline">Previous</span>
+                      </a>
+                    </li>
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li class="ellipsis">...</li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li>
+                      <a aria-label="Next page" href="#">
+                        <span class="d-none d-sm-inline">Next</span>
+                        <i class="bi bi-arrow-right"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </section>
+            <!-- /Category Pagination Section -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2>Join Our Newsletter</h2>
+              <p>
+                Subscribe to get special offers, free giveaways, and
+                once-in-a-lifetime deals.
+              </p>
+              <form
+                action="forms/newsletter.php"
+                class="php-email-form"
+                method="post"
+              >
+                <div class="newsletter-form d-flex">
+                  <input
+                    name="email"
+                    placeholder="Your email address"
+                    required=""
+                    type="email"
+                  />
+                  <button type="submit">Subscribe</button>
+                </div>
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">
+                  Your subscription request has been sent. Thank you!
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-main">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+              <div class="footer-widget footer-about">
+                <a class="logo" href="index.html">
+                  <span class="sitename">eStore</span>
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nullam in nibh vehicula, facilisis magna ut, consectetur
+                  lorem.
+                </p>
+                <div class="footer-contact mt-4">
+                  <div class="contact-item">
+                    <i class="bi bi-geo-alt"></i>
+                    <span>123 Fashion Street, New York, NY 10001</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-telephone"></i>
+                    <span>+1 (555) 123-4567</span>
+                  </div>
+                  <div class="contact-item">
+                    <i class="bi bi-envelope"></i>
+                    <span>hello@example.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Shop</h4>
+                <ul class="footer-links">
+                  <li><a href="category.html">New Arrivals</a></li>
+                  <li><a href="category.html">Bestsellers</a></li>
+                  <li><a href="category.html">Women's Clothing</a></li>
+                  <li><a href="category.html">Men's Clothing</a></li>
+                  <li><a href="category.html">Accessories</a></li>
+                  <li><a href="category.html">Sale</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Support</h4>
+                <ul class="footer-links">
+                  <li><a href="support.html">Help Center</a></li>
+                  <li><a href="account.html">Order Status</a></li>
+                  <li><a href="shiping-info.html">Shipping Info</a></li>
+                  <li>
+                    <a href="return-policy.html">Returns &amp; Exchanges</a>
+                  </li>
+                  <li><a href="#">Size Guide</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Company</h4>
+                <ul class="footer-links">
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="about.html">Careers</a></li>
+                  <li><a href="about.html">Press</a></li>
+                  <li><a href="about.html">Affiliates</a></li>
+                  <li><a href="about.html">Responsibility</a></li>
+                  <li><a href="about.html">Investors</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="footer-widget">
+                <h4>Download Our App</h4>
+                <p>Shop on the go with our mobile app</p>
+                <div class="app-buttons">
+                  <a class="app-btn" href="#">
+                    <i class="bi bi-apple"></i>
+                    <span>App Store</span>
+                  </a>
+                  <a class="app-btn" href="#">
+                    <i class="bi bi-google-play"></i>
+                    <span>Google Play</span>
+                  </a>
+                </div>
+                <div class="social-links mt-4">
+                  <h5>Follow Us</h5>
+                  <div class="social-icons">
+                    <a aria-label="Facebook" href="#"
+                      ><i class="bi bi-facebook"></i
+                    ></a>
+                    <a aria-label="Instagram" href="#"
+                      ><i class="bi bi-instagram"></i
+                    ></a>
+                    <a aria-label="Twitter" href="#"
+                      ><i class="bi bi-twitter-x"></i
+                    ></a>
+                    <a aria-label="TikTok" href="#"
+                      ><i class="bi bi-tiktok"></i
+                    ></a>
+                    <a aria-label="Pinterest" href="#"
+                      ><i class="bi bi-pinterest"></i
+                    ></a>
+                    <a aria-label="YouTube" href="#"
+                      ><i class="bi bi-youtube"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div
+            class="payment-methods d-flex align-items-center justify-content-center"
+          >
+            <span>We Accept:</span>
+            <div class="payment-icons">
+              <i aria-label="Credit Card" class="bi bi-credit-card"></i>
+              <i aria-label="PayPal" class="bi bi-paypal"></i>
+              <i aria-label="Apple Pay" class="bi bi-apple"></i>
+              <i aria-label="Google Pay" class="bi bi-google"></i>
+              <i aria-label="Shop Pay" class="bi bi-shop"></i>
+              <i aria-label="Cash on Delivery" class="bi bi-cash"></i>
+            </div>
+          </div>
+          <div class="legal-links">
+            <a href="tos.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="tos.html">Cookies Settings</a>
+          </div>
+          <div class="copyright text-center">
+            <p>
+              © <span>Copyright</span> <strong class="sitename">eStore</strong>.
+              All Rights Reserved.
+            </p>
+          </div>
+          <div class="credits">
+            <!-- All the links in the footer should remain intact. -->
+            <!-- You can delete the links only if you've purchased the pro version. -->
+            <!-- Licensing information: https://bootstrapmade.com/license/ -->
+            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scroll Top -->
+    <a
+      class="scroll-top d-flex align-items-center justify-content-center"
+      href="#"
+      id="scroll-top"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+    <!-- Preloader -->
+    <!-- Vendor JS Files -->
+    <script src="https://bootstrapmade.com/content/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/php-email-form/validate.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/swiper/swiper-bundle.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/aos/aos.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/glightbox/js/glightbox.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/drift-zoom/Drift.min.js"></script>
+    <script src="https://bootstrapmade.com/content/vendors/purecounter/purecounter_vanilla.js"></script>
+    <!-- Main JS File -->
+    <script src="https://bootstrapmade.com/content/demo/eStore/assets/js/main.js"></script>
+  </body>
+</html>
