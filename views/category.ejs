@@ -3,47 +3,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>e-commerce</title>
-    <!-- bootstrap-icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <!-- Vendor CSS Files -->
-    <link
-      href="https://bootstrapmade.com/content/vendors/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://bootstrapmade.com/content/vendors/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://bootstrapmade.com/content/vendors/swiper/swiper-bundle.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://bootstrapmade.com/content/vendors/aos/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://bootstrapmade.com/content/vendors/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://bootstrapmade.com/content/vendors/drift-zoom/drift-basic.css"
-      rel="stylesheet"
-    />
-    <!-- Main CSS File -->
-    <link
-      href="https://bootstrapmade.com/content/demo/eStore/assets/css/main.css"
-      rel="stylesheet"
-    />
-    <style type="text/css">
-      * {
-        animation-duration: 0.001s !important;
-        transition-duration: 0.001s !important;
-      }
-    </style>
+    <%- include("./partials/css_links.ejs") %>
   </head>
   <body
     class="category-page"
@@ -363,7 +323,6 @@
               </div>
               <!--/Pricing Range Widget -->
               <!-- Brand Filter Widget -->
-              <h3 class="brand-filter-widget widget-item">Filter by Brand</h3>
               <!--/Brand Filter Widget -->
               <!-- Color Filter Widget -->
               <div class="color-filter-widget widget-item">
@@ -801,7 +760,7 @@
               >
                 <div class="row gy-4">
                   <!-- Product 1 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <span class="product-label">New Season</span>
@@ -870,7 +829,7 @@
                   </div>
                   <!-- End Product 1 -->
                   <!-- Product 2 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <span class="product-label product-label-sale"
@@ -942,7 +901,7 @@
                   </div>
                   <!-- End Product 2 -->
                   <!-- Product 3 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <img
@@ -1010,7 +969,7 @@
                   </div>
                   <!-- End Product 3 -->
                   <!-- Product 4 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <img
@@ -1078,7 +1037,7 @@
                   </div>
                   <!-- End Product 4 -->
                   <!-- Product 5 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <span class="product-label product-label-sold"
@@ -1152,7 +1111,7 @@
                   </div>
                   <!-- End Product 5 -->
                   <!-- Product 6 -->
-                  <div class="col-lg-6">
+                  <div class="col-lg-3">
                     <div class="product-box">
                       <div class="product-thumb">
                         <span class="product-label product-label-hot">Hot</span>
@@ -1273,17 +1232,6 @@
       ><i class="bi bi-arrow-up-short"></i
     ></a>
     <!-- Preloader -->
-    <!-- Vendor JS Files -->
-    <script src="https://bootstrapmade.com/content/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/php-email-form/validate.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/swiper/swiper-bundle.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/aos/aos.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/glightbox/js/glightbox.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/drift-zoom/Drift.min.js"></script>
-    <script src="https://bootstrapmade.com/content/vendors/purecounter/purecounter_vanilla.js"></script>
-    <!-- Main JS File -->
-    <script src="https://bootstrapmade.com/content/demo/eStore/assets/js/main.js"></script>
+    <%- include('./partials/js_scripts.ejs') %>
   </body>
 </html>
