@@ -1,203 +1,29 @@
-<html data-bs-theme="light" lang="en">
-  <!--begin::Head--><head>
-    <title>
-      Keen - Multi-demo Bootstrap 5 HTML Admin Dashboard Template by KeenThemes
-    </title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>e-commerce</title>
     <meta charset="utf-8" />
-    <meta
-      content="The most advanced Bootstrap Admin Theme on Bootstrap Market trusted by over 4,000 beginners and professionals. Multi-demo, Dark Mode, RTL support. Grab your copy now and get life-time updates for free."
-      name="description"
-    />
-    <meta
-      content="keen, bootstrap, bootstrap 5, bootstrap 4, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon"
-      name="keywords"
-    />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="en_US" property="og:locale" />
-    <meta content="article" property="og:type" />
-    <meta
-      content="Keen - Multi-demo Bootstrap 5 HTML Admin Dashboard Template by KeenThemes"
-      property="og:title"
-    />
-    <meta content="https://keenthemes.com/keen" property="og:url" />
-    <meta content="Keen by Keenthemes" property="og:site_name" />
-    <link
-      href="https://preview.keenthemes.com/keen/demo1/authentication/layouts/corporate/two-factor.html"
-      rel="canonical"
-    />
-    <link
-      href="https://preview.keenthemes.com/keen/demo1/assets/media/logos/favicon.ico"
-      rel="shortcut icon"
-    />
-    <!--begin::Fonts(mandatory for all pages)-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700"
-      rel="stylesheet"
-    />
-    <!--end::Fonts-->
-    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
-    <link
-      href="https://preview.keenthemes.com/keen/demo1/assets/plugins/global/plugins.bundle.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://preview.keenthemes.com/keen/demo1/assets/css/style.bundle.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <!--end::Global Stylesheets Bundle-->
-    <!--begin::Google tag-->
-    <script
-      async=""
-      src="https://www.google-analytics.com/analytics.js"
-      type="text/javascript"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtag/js?id=G-L98VPZFG7E&amp;l=dataLayer&amp;cx=c&amp;gtm=457e53q1za200&amp;tag_exp=102482433~102788824~102803279~102813109~102887800~102926062~102964103"
-      type="text/javascript"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtag/js?id=UA-37564768-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "UA-37564768-1");
-    </script>
-    <!--end::Google tag-->
-    <script>
-      // Frame-busting to prevent site from being loaded within a frame without permission (click-jacking)
-      if (window.top != window.self) {
-        window.top.location.replace(window.self.location.href);
-      }
-    </script>
-    <style type="text/css">
-      * {
-        animation-duration: 0.001s !important;
-        transition-duration: 0.001s !important;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/auth.css" rel="stylesheet" />
   </head>
-  <!--end::Head-->
-  <!--begin::Body-->
-  <body class="app-blank" id="kt_body">
-    <!--begin::Theme mode setup on page load-->
-    <script>
-      var defaultThemeMode = "light";
-      var themeMode;
-
-      if (document.documentElement) {
-        if (document.documentElement.hasAttribute("data-bs-theme-mode")) {
-          themeMode =
-            document.documentElement.getAttribute("data-bs-theme-mode");
-        } else {
-          if (localStorage.getItem("data-bs-theme") !== null) {
-            themeMode = localStorage.getItem("data-bs-theme");
-          } else {
-            themeMode = defaultThemeMode;
-          }
-        }
-
-        if (themeMode === "system") {
-          themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light";
-        }
-
-        document.documentElement.setAttribute("data-bs-theme", themeMode);
-      }
-    </script>
-    <!--end::Theme mode setup on page load-->
-    <!--Begin::Google Tag Manager (noscript) -->
-    <noscript
-      ><iframe
-        height="0"
-        src="https://www.googletagmanager.com/ns.html?id=GTM-5FS8GGP"
-        style="display: none; visibility: hidden"
-        width="0"
-      ></iframe
-    ></noscript>
-    <!--End::Google Tag Manager (noscript) -->
-    <!--begin::Root-->
-    <div class="d-flex flex-column flex-root" id="kt_app_root">
-      <!--begin::Authentication - Two-factor -->
+  <body class="app-blank">
+    <div class="d-flex flex-column flex-root">
       <div class="d-flex flex-column flex-lg-row flex-column-fluid">
-        <!--begin::Aside-->
         <div
           class="d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center"
-          style="
-            background-image: url(/keen/demo1/assets/media/misc/auth-bg.png);
-          "
         >
-          <!--begin::Content-->
           <div class="d-flex flex-column flex-center p-6 p-lg-10 w-100">
-            <!--begin::Logo-->
-            <a
-              class="mb-0 mb-lg-20"
-              href="https://preview.keenthemes.com/keen/demo1/index.html"
-            >
-              <img
-                alt="Logo"
-                class="h-40px h-lg-50px"
-                src="https://preview.keenthemes.com/keen/demo1/assets/media/logos/default-white.svg"
-              />
-            </a>
-            <!--end::Logo-->
-            <!--begin::Image-->
             <img
-              alt=""
+              alt="Sign In"
               class="d-none d-lg-block mx-auto w-300px w-lg-75 w-xl-500px mb-10 mb-lg-20"
-              src="https://preview.keenthemes.com/keen/demo1/assets/media/misc/auth-screens.png"
+              src="./img/two_factor_auth.svg"
             />
-            <!--end::Image-->
-            <!--begin::Title-->
-            <h1
-              class="d-none d-lg-block text-white fs-2qx fw-bold text-center mb-7"
-            >
-              Fast, Efficient and Productive
-            </h1>
-            <!--end::Title-->
-            <!--begin::Text-->
-            <div class="d-none d-lg-block text-white fs-base text-center">
-              In this kind of post,
-              <a class="opacity-75-hover text-warning fw-semibold me-1" href="#"
-                >the blogger</a
-              >
-
-              introduces a person they’ve interviewed <br />
-              and provides some background information about
-
-              <a class="opacity-75-hover text-warning fw-semibold me-1" href="#"
-                >the interviewee</a
-              >
-              and their <br />
-              work following this is a transcript of the interview.
-            </div>
-            <!--end::Text-->
           </div>
-          <!--end::Content-->
         </div>
-        <!--begin::Aside-->
-        <!--begin::Body-->
-        <div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-10">
-          <!--begin::Form-->
+        <div class="d-flex flex-column flex-lg-row-fluid w-lg-50 p-5">
           <div class="d-flex flex-center flex-column flex-lg-row-fluid">
-            <!--begin::Wrapper-->
-            <div class="w-lg-500px p-10">
-              <!--begin::Form-->
-              <form
-                class="form w-100 mb-13"
-                data-kt-redirect-url="/keen/demo1/index.html"
-                id="kt_sing_in_two_factor_form"
-                novalidate="novalidate"
-              >
-                <!--begin::Icon-->
+            <div class="w-lg-500px">
+              <form class="form w-100 mb-13">
                 <div class="text-center mb-10">
                   <img
                     alt="Logo"
@@ -205,31 +31,18 @@
                     src="https://preview.keenthemes.com/keen/demo1/assets/media/svg/misc/smartphone-2.svg"
                   />
                 </div>
-                <!--end::Icon-->
-                <!--begin::Heading-->
                 <div class="text-center mb-10">
-                  <!--begin::Title-->
                   <h1 class="text-gray-900 mb-3">Two-Factor Verification</h1>
-                  <!--end::Title-->
-                  <!--begin::Sub-title-->
                   <div class="text-muted fw-semibold fs-5 mb-5">
                     Enter the verification code we sent to
                   </div>
-                  <!--end::Sub-title-->
-                  <!--begin::Mobile no-->
                   <div class="fw-bold text-gray-900 fs-3">******7859</div>
-                  <!--end::Mobile no-->
                 </div>
-                <!--end::Heading-->
-                <!--begin::Section-->
                 <div class="mb-10">
-                  <!--begin::Label-->
-                  <div class="fw-bold text-start text-gray-900 fs-6 mb-1 ms-1">
+                  <div class="fw-bold text-center text-gray-900 fs-6 mb-1 ms-1">
                     Type your 6 digit security code
                   </div>
-                  <!--end::Label-->
-                  <!--begin::Input group-->
-                  <div class="d-flex flex-wrap flex-stack">
+                  <div class="d-flex flex-no-wrap">
                     <input
                       class="form-control bg-transparent h-60px w-60px fs-2qx text-center mx-1 my-2"
                       data-inputmask="'mask': '9', 'placeholder': ''"
@@ -285,98 +98,62 @@
                       value=""
                     />
                   </div>
-                  <!--begin::Input group-->
                 </div>
-                <!--end::Section-->
-                <!--begin::Submit-->
                 <div class="d-flex flex-center">
                   <button
                     class="btn btn-lg btn-primary fw-bold"
-                    id="kt_sing_in_two_factor_submit"
+                    style="background-color: #0a4db8"
                     type="button"
                   >
-                    <span class="indicator-label"> Submit </span>
-                    <span class="indicator-progress">
-                      Please wait...
-                      <span
-                        class="spinner-border spinner-border-sm align-middle ms-2"
-                      ></span>
-                    </span>
+                    Submit
                   </button>
                 </div>
-                <!--end::Submit-->
               </form>
-              <!--end::Form-->
-              <!--begin::Notice-->
               <div class="text-center fw-semibold fs-5">
                 <span class="text-muted me-1">Didn’t get the code ?</span>
                 <a class="link-primary fs-5 me-1" href="#">Resend</a>
-                <span class="text-muted me-1">or</span>
-                <a class="link-primary fs-5" href="#">Call Us</a>
               </div>
-              <!--end::Notice-->
             </div>
-            <!--end::Wrapper-->
           </div>
-          <!--end::Form-->
-          <!--begin::Footer-->
-          <div class="d-flex flex-center flex-wrap px-5">
-            <!--begin::Links-->
-            <div class="d-flex fw-semibold text-primary fs-base">
-              <a class="px-5" href="https://keenthemes.com" target="_blank"
-                >Terms</a
-              >
-              <a class="px-5" href="https://devs.keenthemes.com" target="_blank"
-                >Plans</a
-              >
-              <a
-                class="px-5"
-                href="https://themes.getbootstrap.com/product/keen-the-ultimate-bootstrap-admin-theme/"
-                target="_blank"
-                >Contact Us</a
-              >
-            </div>
-            <!--end::Links-->
-          </div>
-          <!--end::Footer-->
         </div>
-        <!--end::Body-->
       </div>
-      <!--end::Authentication - Two-factor-->
     </div>
-    <!--end::Root-->
-    <!--begin::Javascript-->
     <script>
-      var hostUrl = "/keen/demo1/assets/";
+      document.addEventListener("DOMContentLoaded", function () {
+        const inputs = document.querySelectorAll("input[name^='code_']");
+
+        inputs.forEach((input, index) => {
+          input.addEventListener("input", (e) => {
+            if (e.target.value.length === 1) {
+              if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+              }
+            }
+          });
+
+          input.addEventListener("keydown", (e) => {
+            if (e.key === "Backspace" && e.target.value.length === 0) {
+              if (index > 0) {
+                inputs[index - 1].focus();
+              }
+            }
+          });
+        });
+
+        document.addEventListener("paste", (e) => {
+          let pasteData = (e.clipboardData || window.clipboardData)
+            .getData("text")
+            .trim();
+
+          pasteData.split("").forEach((char, i) => {
+            if (inputs[i]) {
+              inputs[i].value = char;
+            }
+          });
+          inputs[inputs.length - 1].focus();
+        });
+      });
     </script>
-    <!--begin::Global Javascript Bundle(mandatory for all pages)-->
-    <script src="https://preview.keenthemes.com/keen/demo1/assets/plugins/global/plugins.bundle.js"></script>
     <script src="https://preview.keenthemes.com/keen/demo1/assets/js/scripts.bundle.js"></script>
-    <!--end::Global Javascript Bundle-->
-    <!--begin::Custom Javascript(used for this page only)-->
-    <script src="https://preview.keenthemes.com/keen/demo1/assets/js/custom/authentication/sign-in/two-factor.js"></script>
-    <!--end::Custom Javascript-->
-    <!--end::Javascript-->
-    <svg
-      height="0"
-      id="SvgjsSvg1001"
-      style="
-        overflow: hidden;
-        top: -100%;
-        left: -100%;
-        position: absolute;
-        opacity: 0;
-      "
-      version="1.1"
-      width="2"
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:svgjs="http://svgjs.dev"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-    >
-      <defs id="SvgjsDefs1002"></defs>
-      <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
-      <path d="M0 0 " id="SvgjsPath1004"></path>
-    </svg>
   </body>
-  <!--end::Body-->
 </html>
