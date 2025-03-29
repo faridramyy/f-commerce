@@ -23,7 +23,7 @@
         <div class="d-flex flex-column flex-lg-row-fluid w-lg-50">
           <div class="d-flex flex-center flex-column flex-lg-row-fluid">
             <div class="w-lg-500px p-10">
-              <form class="form w-100" action="#">
+              <form class="form w-100" id="loginForm">
                 <div class="text-center mb-11">
                   <h1 class="text-gray-900 fw-bolder mb-3">Sign In</h1>
                   <div class="text-gray-500 fw-semibold fs-6">f-commerce</div>
@@ -70,6 +70,7 @@
                   <input
                     class="form-control bg-transparent"
                     name="email"
+                    id="email"
                     placeholder="Email"
                     type="text"
                   />
@@ -78,6 +79,7 @@
                   <input
                     class="form-control bg-transparent"
                     name="password"
+                    id="password"
                     placeholder="Password"
                     type="password"
                   />
@@ -94,6 +96,7 @@
                     class="btn btn-primary"
                     style="background-color: #0a4db8"
                     type="submit"
+                    id="loginBtn"
                   >
                     Sign In
                   </button>
@@ -109,5 +112,42 @@
       </div>
     </div>
     <script src="https://preview.keenthemes.com/keen/demo1/assets/js/scripts.bundle.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("loginForm")
+          .addEventListener("submit", async function (event) {
+            event.preventDefault(); 
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (!email || !password) {
+              alert("Please enter both email and password.");
+              return;
+            }
+
+            try {
+              const response = await fetch("/api/users/login", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, password }),
+              });
+
+              const data = await response.json();
+
+              if (!response.ok) {
+                throw new Error(data.message || "Login failed");
+              }
+
+              alert("Login successful!");
+            } catch (error) {
+              alert(error.message);
+            }
+          });
+      });
+    </script>
   </body>
 </html>
