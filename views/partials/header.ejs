@@ -131,6 +131,16 @@
           </div>
         </form>
         <!-- Actions -->
+        <% if (user == null) { %>
+        <div
+          class="header-actions d-flex align-items-center justify-content-end"
+        >
+          <a class="w-100 t" href="/signin"
+            >Join us
+            <i class="bi bi-box-arrow-in-right"></i>
+          </a>
+        </div>
+        <% } else { %>
         <div
           class="header-actions d-flex align-items-center justify-content-end"
         >
@@ -205,6 +215,7 @@
           <!-- Mobile Navigation Toggle -->
           <i class="mobile-nav-toggle d-xl-none bi bi-list me-0"></i>
         </div>
+        <% } %>
       </div>
     </div>
   </div>

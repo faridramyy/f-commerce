@@ -2,6 +2,11 @@ import express from "express";
 
 const router = express.Router();
 
+router.use((req, res, next) => {
+  res.locals.user = null;
+  next();
+});
+
 router.get("/", (req, res) => res.render("./index"));
 router.get("/signin", (req, res) => res.render("./authentication/signin"));
 router.get("/signup", (req, res) => res.render("./authentication/signup"));

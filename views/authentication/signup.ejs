@@ -1,11 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  sign up
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <%- include("../partials/css_links.ejs") %>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <div
+      class="container d-flex flex-column flex-lg-row align-items-center justify-content-center flex-grow-1"
+    >
+      <div
+        class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center"
+      >
+        <img alt="Sign In" class="img-fluid w-75" src="./img/auth/signup.svg" />
+      </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <div class="p-4 w-100" style="max-width: 500px">
+          <form class="form" id="loginForm">
+            <div class="text-center mb-4">
+              <h1 class="text-dark fw-bold">Sign Up</h1>
+              <p class="text-secondary opacity-75">f-commerce</p>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-12 col-md-6">
+                <a
+                  class="border p-2 rounded-3 btn-outline-secondary text-dark w-100 d-flex align-items-center justify-content-center text-nowrap"
+                  href="#"
+                >
+                  <img
+                    alt="Google"
+                    class="me-2"
+                    src="./img/auth/google-icon.svg"
+                    style="height: 15px"
+                  />
+                  Sign up with Google
+                </a>
+              </div>
+              <div class="col-12 col-md-6">
+                <a
+                  class="border p-2 rounded-3 btn-outline-secondary text-dark w-100 d-flex align-items-center justify-content-center text-nowrap"
+                  href="#"
+                >
+                  <img
+                    alt="Apple"
+                    class="me-2"
+                    src="./img/auth/apple-b.svg"
+                    style="height: 15px"
+                  />
+                  Sign up with Apple
+                </a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center m-5">
+              <hr class="flex-grow-1 opacity-50" />
+              <span class="mx-3 text-secondary opacity-50">Or with email</span>
+              <hr class="flex-grow-1 opacity-50" />
+            </div>
+
+            <div class="mb-3">
+              <input
+                class="form-control p-2"
+                name="email"
+                id="email"
+                placeholder="Email"
+                type="text"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <div class="mb-2">
+                <input
+                  class="form-control p-2"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  type="password"
+                  required
+                  oninput="checkPasswordStrength()"
+                />
+              </div>
+              <div class="d-flex mt-2">
+                <div
+                  class="flex-fill mx-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
+                  style="height: 3px"
+                ></div>
+                <div
+                  class="flex-fill mx-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
+                  style="height: 3px"
+                ></div>
+                <div
+                  class="flex-fill mx-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
+                  style="height: 3px"
+                ></div>
+                <div
+                  class="flex-fill mx-1 mb-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
+                  style="height: 3px"
+                ></div>
+              </div>
+
+              <small id="passwordHelp" class="form-text text-muted opacity-50"
+                >Use 8 or more characters with a mix of letters, numbers &
+                symbols.</small
+              >
+            </div>
+
+            <div class="mb-5">
+              <input
+                class="form-control p-2"
+                name="confirm_password"
+                id="confirm_password"
+                placeholder="Confirm Password"
+                type="password"
+                required
+              />
+            </div>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const password = document.getElementById("password");
+                const strengthBars = document.querySelectorAll(".strength-bar");
+                const passwordHint = document.getElementById("passwordHelp");
+
+                // Function to check password strength
+                function checkPasswordStrength() {
+                  const value = password.value;
+                  let strength = 0;
+
+                  if (value.length >= 8) strength++; // Minimum length
+                  if (/[A-Z]/.test(value)) strength++; // Uppercase letter
+                  if (/[0-9]/.test(value)) strength++; // Number
+                  if (/[\W]/.test(value)) strength++; // Special character
+
+                  // Update bar colors based on strength
+                  strengthBars.forEach((bar, index) => {
+                    bar.classList.remove(
+                      "bg-danger",
+                      "bg-warning",
+                      "bg-success",
+                      "opacity-25"
+                    );
+                    if (index < strength) {
+                      bar.classList.add(
+                        strength < 2
+                          ? "bg-danger"
+                          : strength < 3
+                          ? "bg-warning"
+                          : "bg-success"
+                      );
+                    } else {
+                      bar.classList.add("bg-secondary", "opacity-25");
+                    }
+                  });
+
+                  // Change hint text color based on strength
+                  passwordHint.classList.toggle("text-danger", strength < 2);
+                  passwordHint.classList.toggle("text-warning", strength === 2);
+                  passwordHint.classList.toggle("text-success", strength > 2);
+                }
+              });
+            </script>
+
+            <div class="mb-3">
+              <label class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  name="toc"
+                  type="checkbox"
+                  value="1"
+                />
+                <span class="form-check-label text-gray-700 fs-base ms-1">
+                  I Accept the
+                  <a class="ms-1 link-primary" href="#">Terms & Conditions</a>
+                </span>
+              </label>
+            </div>
+            <button
+              class="btn btn-primary w-100"
+              type="submit"
+              id="loginBtn"
+              style="background-color: var(--accent-color)"
+            >
+              Sign Up
+            </button>
+            <div class="text-center text-muted mt-3">
+              Already have an accound?
+              <a class="text-secondary text-decoration-underline" href="/signin"
+                >Sign In</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
