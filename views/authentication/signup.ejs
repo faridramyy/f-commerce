@@ -17,7 +17,7 @@
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <div class="p-4 w-100" style="max-width: 500px">
-          <form class="form" id="loginForm">
+          <form class="form" id="signupForm">
             <div class="text-center mb-4">
               <h1 class="text-dark fw-bold">Sign Up</h1>
               <p class="text-secondary opacity-75">f-commerce</p>
@@ -65,7 +65,7 @@
                 name="email"
                 id="email"
                 placeholder="Email"
-                type="text"
+                type="email"
                 required
               />
             </div>
@@ -94,16 +94,12 @@
                   class="flex-fill mx-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
                   style="height: 3px"
                 ></div>
-                <div
-                  class="flex-fill mx-1 mb-1 strength-bar bg-secondary bg-gradient opacity-25 rounded-5"
-                  style="height: 3px"
-                ></div>
               </div>
 
-              <small id="passwordHelp" class="form-text text-muted opacity-50"
-                >Use 8 or more characters with a mix of letters, numbers &
-                symbols.</small
-              >
+              <small id="passwordHelp" class="form-text text-muted opacity-50">
+                Use 8 or more characters with a mix of letters, numbers &
+                symbols.
+              </small>
             </div>
 
             <div class="mb-5">
@@ -116,49 +112,47 @@
                 required
               />
             </div>
+
             <script>
-              document.addEventListener("DOMContentLoaded", function () {
+              function checkPasswordStrength() {
                 const password = document.getElementById("password");
                 const strengthBars = document.querySelectorAll(".strength-bar");
                 const passwordHint = document.getElementById("passwordHelp");
 
-                // Function to check password strength
-                function checkPasswordStrength() {
-                  const value = password.value;
-                  let strength = 0;
+                let strength = 0;
+                const value = password.value;
 
-                  if (value.length >= 8) strength++; // Minimum length
-                  if (/[A-Z]/.test(value)) strength++; // Uppercase letter
-                  if (/[0-9]/.test(value)) strength++; // Number
-                  if (/[\W]/.test(value)) strength++; // Special character
+                if (value.length >= 8) strength++; // Minimum length
+                if (/[A-Z]/.test(value)) strength++; // Uppercase letter
+                if (/[0-9]/.test(value)) strength++; // Number
+                if (/[\W]/.test(value)) strength++; // Special character
 
-                  // Update bar colors based on strength
-                  strengthBars.forEach((bar, index) => {
-                    bar.classList.remove(
-                      "bg-danger",
-                      "bg-warning",
-                      "bg-success",
-                      "opacity-25"
+                // Update bar colors based on strength
+                strengthBars.forEach((bar, index) => {
+                  bar.classList.remove(
+                    "bg-danger",
+                    "bg-warning",
+                    "bg-success",
+                    "opacity-25"
+                  );
+                  if (index < strength) {
+                    bar.classList.add(
+                      strength < 2
+                        ? "bg-danger"
+                        : strength < 3
+                        ? "bg-warning"
+                        : "bg-success"
                     );
-                    if (index < strength) {
-                      bar.classList.add(
-                        strength < 2
-                          ? "bg-danger"
-                          : strength < 3
-                          ? "bg-warning"
-                          : "bg-success"
-                      );
-                    } else {
-                      bar.classList.add("bg-secondary", "opacity-25");
-                    }
-                  });
+                  } else {
+                    bar.classList.add("bg-secondary", "opacity-25");
+                  }
+                });
 
-                  // Change hint text color based on strength
-                  passwordHint.classList.toggle("text-danger", strength < 2);
-                  passwordHint.classList.toggle("text-warning", strength === 2);
-                  passwordHint.classList.toggle("text-success", strength > 2);
-                }
-              });
+                // Change hint text color based on strength
+                passwordHint.classList.toggle("text-danger", strength < 2);
+                passwordHint.classList.toggle("text-warning", strength === 2);
+                passwordHint.classList.toggle("text-success", strength > 2);
+              }
             </script>
 
             <div class="mb-3">
@@ -168,6 +162,7 @@
                   name="toc"
                   type="checkbox"
                   value="1"
+                  required
                 />
                 <span class="form-check-label text-gray-700 fs-base ms-1">
                   I Accept the
@@ -178,13 +173,13 @@
             <button
               class="btn btn-primary w-100"
               type="submit"
-              id="loginBtn"
+              id="signupBtn"
               style="background-color: var(--accent-color)"
             >
               Sign Up
             </button>
             <div class="text-center text-muted mt-3">
-              Already have an accound?
+              Already have an account?
               <a class="text-secondary text-decoration-underline" href="/signin"
                 >Sign In</a
               >
