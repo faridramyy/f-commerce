@@ -1,12 +1,37 @@
 import express from "express";
-
+import User from "../models/User.js";
+import secrets from "../config/secrets.js";
+import jwt from "jsonwebtoken";
 const router = express.Router();
 
-router.use((req, res, next) => {
-  res.locals.user = {};
-  next();
+router.use(async (req, res, next) => {
+  try {
+    const token = req.cookies.token;
+
+    if (!token) {
+      res.locals.user = null;
+      return next();
+    }
+
+    const decoded = jwt.verify(token, secrets.JWT_SECRET);
+
+    // Fetch user to verify they still exist
+    const user = await User.findById(decoded.userId);
+    if (!user) {
+      res.locals.user = null;
+      return next();
+    }
+
+    res.locals.user = user;
+    next();
+  } catch (error) {
+    console.log(error);
+    res.locals.user = null;
+    return next();
+  }
 });
 
+router.get("/customer", (req, res) => res.redirect("/"));
 router.get("/", (req, res) => res.render("./index"));
 router.get("/signin", (req, res) => res.render("./authentication/signin"));
 router.get("/signup", (req, res) => res.render("./authentication/signup"));

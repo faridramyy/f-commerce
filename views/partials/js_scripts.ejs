@@ -14,3 +14,24 @@
 <script src="./js/purecounter_vanilla.js"></script>
 <!-- Main JS File -->
 <script src="./js/main.js"></script>
+<!-- toastify -->
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/toastify-js"
+></script>
+
+<script>
+  function showToast(message, color = "red") {
+    Toastify({
+      text: message,
+      duration: 3000,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: color,
+      },
+    }).showToast();
+  }
+</script>
