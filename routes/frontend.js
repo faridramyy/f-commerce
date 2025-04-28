@@ -3,7 +3,7 @@ import express from "express";
 const router = express.Router();
 
 router.use((req, res, next) => {
-  res.locals.user = req.user;
+  res.locals.user = {};
   next();
 });
 
@@ -20,6 +20,7 @@ router.get("/two_step_verification", (req, res) =>
   res.render("./authentication/two_step_verification")
 );
 
+router.get("/contact", (req, res) => res.render("./contact"));
 router.get("/cart", (req, res) => res.render("./cart"));
 router.get("/shop", (req, res) => res.render("./shop"));
 router.get("/checkout", (req, res) => res.render("./checkout"));
