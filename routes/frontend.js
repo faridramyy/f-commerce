@@ -33,17 +33,19 @@ router.use(async (req, res, next) => {
 
 router.get("/customer", (req, res) => res.redirect("/"));
 router.get("/", (req, res) => res.render("./index"));
+
 router.get("/signin", (req, res) => res.render("./authentication/signin"));
 router.get("/signup", (req, res) => res.render("./authentication/signup"));
-router.get("/cooperate_signin", (req, res) =>
-  res.render("./authentication/cooperate_signin")
-);
 router.get("/forget_password", (req, res) =>
   res.render("./authentication/forget_password")
 );
-router.get("/two_step_verification", (req, res) =>
-  res.render("./authentication/two_step_verification")
-);
+router.get("/otp", (req, res) => {
+  const email = req.query.email; // Access email from query string
+  if (!email) {
+    return res.status(400).send("Email is required");
+  }
+  res.render("./authentication/otp", { email });
+});
 
 router.get("/contact", (req, res) => res.render("./contact"));
 router.get("/cart", (req, res) => res.render("./cart"));

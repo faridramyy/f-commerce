@@ -2,8 +2,9 @@ import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import secrets from "../config/secrets.js";
+import sendEmail from "../utilities/emailService.js";
+import otpGenerator from "otp-generator";
 
-// ✅ Reusable function
 const generateAndSendToken = (user, res, statusCode = 200) => {
   const token = jwt.sign(
     { userId: user._id, role: user.role },
@@ -20,7 +21,6 @@ const generateAndSendToken = (user, res, statusCode = 200) => {
   return token;
 };
 
-// ✅ Register User
 export const registerUser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
@@ -41,6 +41,12 @@ export const registerUser = async (req, res) => {
 
     await user.save();
 
+    sendEmail({
+      to: email,
+      subject: "Verify your email",
+      text: `Please verify your email by clicking the link below.\n http://${secrets.HOST}:${secrets.PORT}/api/users/verify_email/${user._id}`,
+    });
+
     generateAndSendToken(user, res, 201); // 201 Created
     res.json({ message: "User registered successfully", user });
   } catch (error) {
@@ -49,7 +55,6 @@ export const registerUser = async (req, res) => {
   }
 };
 
-// ✅ Login User
 export const loginUser = async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -67,6 +72,88 @@ export const loginUser = async (req, res) => {
     generateAndSendToken(user, res, 200); // 200 OK
     res.json({ message: "Login successful", user });
   } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
+export const verifyEmail = async (req, res) => {
+  console.log(req.params.id);
+  console.log("x");
+  try {
+    const userId = req.params.id;
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    user.isVerified = true;
+    await user.save();
+
+    res.status(200).json({ message: "Email verified successfully" });
+  } catch (error) {
+    console.log(error.message);
+    res.status(500).json({ message: "Error verifying email", error });
+  }
+};
+
+export const forgotPassword = async (req, res) => {
+  const { email } = req.body;
+
+  if (!email) {
+    return res.status(400).json({ message: "Email is required." });
+  }
+
+  try {
+    const user = await User.findOne({ email });
+
+    if (!user) {
+      return res
+        .status(400)
+        .json({ message: "No user registered with this email" });
+    }
+
+    // Generate a 6-digit OTP
+    const otp = otpGenerator.generate(6);
+    user.resetOtp = otp;
+    user.otpExpireAt = Date.now() + 10 * 60 * 1000; // OTP expires in 10 minutes
+    await user.save();
+
+    sendEmail({
+      to: email,
+      subject: "Your OTP for Password Reset",
+      text: `Your OTP is: ${otp}. It will expire in 10 minutes.`,
+    });
+
+    res.status(200).json({ message: "OTP sent successfully!" });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ message: "Server error", error: error.message });
+  }
+};
+
+export const verifyOtp = async (req, res) => {
+  const { otp } = req.body;
+
+  if (!otp) {
+    return res.status(400).json({ message: "OTP is required." });
+  }
+
+  try {
+    const user = await User.findOne({ resetOtp: otp });
+
+    if (!user) {
+      return res.status(400).json({ message: "Invalid OTP." });
+    }
+    if (user.otpExpireAt < Date.now()) {
+      return res.status(400).json({ message: "OTP has expired." });
+    }
+
+    res.status(200).json({ message: "OTP verified successfully!" });
+    // Redirect to reset password page or proceed with password reset process
+  } catch (error) {
+    console.error("Error verifying OTP:", error);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
@@ -76,6 +163,7 @@ export const getUsers = async (req, res) => {
     const users = await User.find();
     res.status(200).json(users);
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
@@ -88,6 +176,7 @@ export const getUserById = async (req, res) => {
     }
     res.status(200).json(user);
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
@@ -105,6 +194,7 @@ export const updateUser = async (req, res) => {
     }
     res.status(200).json({ message: "User updated successfully", user });
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
@@ -117,6 +207,7 @@ export const deleteUser = async (req, res) => {
     }
     res.status(200).json({ message: "User deleted successfully" });
   } catch (error) {
+    console.log(error.message);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };

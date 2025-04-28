@@ -24,14 +24,15 @@
           <form class="form">
             <div class="text-center mb-5">
               <img class="mb-5" src="./img/auth/mobile.svg" alt="" />
-              <h1 class="text-dark fw-bold">2-factor Verification</h1>
+              <h1 class="text-dark fw-bold">OTP Verification</h1>
               <p class="text-secondary opacity-75">
-                Enter the verification code we sent to
+                Enter the 6-characters OTP we sent to your email address.
               </p>
-              <p class="fw-bold">*******6349</p>
+              <p class="fw-bold"><%= email%></p>
+              <!-- You can dynamically insert part of the email -->
             </div>
 
-            <!-- Six Input Fields -->
+            <!-- Six Input Fields for OTP -->
             <div class="d-flex justify-content-center my-5">
               <input
                 type="text"
@@ -86,7 +87,7 @@
             </button>
 
             <div class="text-center text-muted mt-3">
-              Didn't get the code?
+              Didn't get the OTP?
               <button
                 class="text-secondary text-decoration-underline bg-transparent border-0 p-0"
               >
@@ -97,11 +98,12 @@
         </div>
       </div>
     </div>
+    <%- include('../partials/js_scripts.ejs') %>
 
     <script>
       // Get all input fields
       const inputs = document.querySelectorAll('input[type="text"]');
-    
+
       // Function to move to the next input
       function moveToNextInput(e) {
         // Move to the next input if the current one is filled
@@ -112,7 +114,7 @@
           }
         }
       }
-    
+
       // Function to move to the previous input on backspace
       function moveToPreviousInput(e) {
         // Move to the previous input if the current one is empty
@@ -123,13 +125,13 @@
           }
         }
       }
-    
+
       // Handle paste event to support pasting multiple characters
       function handlePaste(e) {
-        const pastedText = e.clipboardData.getData('text');
-        const inputArray = pastedText.split('');
+        const pastedText = e.clipboardData.getData("text");
+        const inputArray = pastedText.split("");
         let currentInputIndex = 0;
-    
+
         // Fill inputs with pasted characters
         inputs.forEach((input) => {
           if (inputArray[currentInputIndex]) {
@@ -140,23 +142,23 @@
             }
           }
         });
-    
+
         // Focus the next empty input
-        const nextEmptyInput = [...inputs].find(input => input.value === '');
+        const nextEmptyInput = [...inputs].find((input) => input.value === "");
         if (nextEmptyInput) {
           nextEmptyInput.focus();
         }
       }
-    
+
       // Add event listeners to each input
-      inputs.forEach(input => {
-        input.addEventListener('input', moveToNextInput);
-        input.addEventListener('keydown', (e) => {
-          if (e.key === 'Backspace') {
+      inputs.forEach((input) => {
+        input.addEventListener("input", moveToNextInput);
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace") {
             moveToPreviousInput(e);
           }
         });
-        input.addEventListener('paste', handlePaste);
+        input.addEventListener("paste", handlePaste);
       });
     </script>
   </body>
