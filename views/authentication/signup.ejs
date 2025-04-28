@@ -196,9 +196,12 @@
     <%- include('../partials/js_scripts.ejs') %>
     <script>
       const signupForm = document.getElementById("signupForm");
+      const signupBtn = document.getElementById("signupBtn");
 
       signupForm.addEventListener("submit", async (e) => {
         e.preventDefault(); // Prevent normal form submit
+        signupBtn.disabled = true;
+        signupBtn.textContent = "Signing Up...";
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value.trim();
@@ -209,12 +212,16 @@
         // Basic  fields
         if (!name || !email || !password || !confirmPassword) {
           showToast("Please fill all fields");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
           return;
         }
 
         // Validate name strength (at least 3 characters)
         if (name.length < 3) {
           showToast("Name must be at least 3 characters long");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
           return;
         }
 
@@ -222,17 +229,23 @@
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
           showToast("Please enter a valid email address");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
           return;
         }
 
         // Validate password strength (at least 6 characters)
         if (password.length < 6) {
           showToast("Password must be at least 6 characters long");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
           return;
         }
         // Check password match
         if (password !== confirmPassword) {
           showToast("Passwords do not match");
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
           return;
         }
 
@@ -255,13 +268,17 @@
           if (response.ok) {
             showToast(data.message || "Registered Successfully", "green");
             setTimeout(() => {
-              window.location.href = `${data.user.role}`; // Redirect to signin after signup
+              window.location.href = `${data.user.role}`;
             }, 1500);
           } else {
             showToast(data.message || "Registration failed");
+            signupBtn.disabled = false;
+            signupBtn.textContent = "Sign Up";
           }
         } catch (error) {
           showToast("Server Error: " + error.message);
+          signupBtn.disabled = false;
+          signupBtn.textContent = "Sign Up";
         }
       });
     </script>
