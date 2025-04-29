@@ -272,11 +272,10 @@
             }, 1500);
           } else {
             showToast(data.message || "Registration failed");
-            signupBtn.disabled = false;
-            signupBtn.textContent = "Sign Up";
           }
         } catch (error) {
           showToast("Server Error: " + error.message);
+        } finally {
           signupBtn.disabled = false;
           signupBtn.textContent = "Sign Up";
         }

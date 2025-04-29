@@ -4,7 +4,7 @@ import {
   loginUser,
   verifyEmail,
   forgotPassword,
-  verifyOtp,
+  verifyOtpAndChangePassword,
   getUsers,
   getUserById,
   updateUser,
@@ -17,7 +17,7 @@ router.post("/register", registerUser);
 router.post("/login", loginUser);
 router.get("/verify_email/:id", verifyEmail);
 router.post("/forget_password", forgotPassword);
-router.post("/verify_otp/:email", verifyOtp);
+router.post("/verify_otp_and_change_password", verifyOtpAndChangePassword);
 
 router.get("/", getUsers);
 router.get("/:id", getUserById);

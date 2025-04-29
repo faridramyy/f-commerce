@@ -145,6 +145,8 @@
           }
         } catch (error) {
           showToast("Server Error: " + error.message);
+        }
+        finally {
           loginBtn.disabled = false;
           loginBtn.textContent = "Sign In";
         }

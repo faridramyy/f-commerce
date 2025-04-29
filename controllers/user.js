@@ -64,7 +64,8 @@ export const loginUser = async (req, res) => {
         .json({ message: "Email and password are required" });
     }
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).select("+password");
+
     if (!user || !(await bcrypt.compare(password, user.password))) {
       return res.status(401).json({ message: "Wrong username or password" });
     }
@@ -79,7 +80,6 @@ export const loginUser = async (req, res) => {
 
 export const verifyEmail = async (req, res) => {
   console.log(req.params.id);
-  console.log("x");
   try {
     const userId = req.params.id;
 
@@ -133,11 +133,11 @@ export const forgotPassword = async (req, res) => {
   }
 };
 
-export const verifyOtp = async (req, res) => {
-  const { otp } = req.body;
+export const verifyOtpAndChangePassword = async (req, res) => {
+  const { otp, password } = req.body;
 
-  if (!otp) {
-    return res.status(400).json({ message: "OTP is required." });
+  if (!otp || !password) {
+    return res.status(400).json({ message: "OTP and Passworsd are required." });
   }
 
   try {
@@ -150,10 +150,14 @@ export const verifyOtp = async (req, res) => {
       return res.status(400).json({ message: "OTP has expired." });
     }
 
-    res.status(200).json({ message: "OTP verified successfully!" });
-    // Redirect to reset password page or proceed with password reset process
+    user.password = password;
+    await user.save();
+
+    res
+      .status(200)
+      .json({ message: "OTP verified and password chnaged successfully!" });
   } catch (error) {
-    console.error("Error verifying OTP:", error);
+    console.error("Error verifying OTP:", error.message);
     res.status(500).json({ message: "Server error", error: error.message });
   }
 };
